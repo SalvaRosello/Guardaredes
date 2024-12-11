@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./main.js" type="module"></script>
+  <link rel="stylesheet" href="./styles/homePage.css">
+  <title>Guardaredes</title>
+</head>
+<body>
+  <header>
+    <h1>Estadísticas de Porteros</h1>
+    <div id="game-info">
+      <label for="player">Portero:</label>
+      <input type="text" id="player" placeholder="Nombre del portero">
+      <button id="start-game">Iniciar Partido</button>
+    </div>
+  </header>
+  <main>
+    <section id="goal-section">
+      <h2>Portería</h2>
+      <div id="goal-grid">
+      </div>
+      <div id="actions">
+        <button id="save">Parada</button>
+        <button id="goal">Gol</button>
+        <button id="undo">Borrar</button>
+      </div>
+    </section>
+    <section id="stats-section">
+      <h2>Estadísticas</h2>
+      <div id="stats"></div>
+    </section>
+  </main>
+</body>
+</html>
