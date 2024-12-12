@@ -1,6 +1,7 @@
 {
   "name": "guardaredes",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +13,10 @@
   "description": "",
   "dependencies": {
     "@supabase/supabase-js": "^2.47.5",
-    "express": "^4.21.2"
+    "@types/pg": "^8.11.10",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
