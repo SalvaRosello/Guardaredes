@@ -1,6 +1,7 @@
 import Express from 'express';
 import path from 'path';
 import { publicPath } from '../configuration/config.js';
+import { ActionController } from '../controllers/ActionController.js';
 
 const staticRouter = Express.Router();
 
