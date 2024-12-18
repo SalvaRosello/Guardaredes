@@ -37,7 +37,7 @@ export class ActionServices {
 
     static async getStats(): Promise<ApiResponse<StatsDto>> {
         try {
-            const result = await pool.query('SELECT goals_conceded, saves FROM stats WHERE id = 1');
+            const result = await pool.query('SELECT goles, paradas FROM stats WHERE id = 1');
             return {
                 success: true,
                 message: 'Estadísticas obtenidas exitosamente',
