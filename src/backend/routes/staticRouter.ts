@@ -5,6 +5,11 @@ import { StatsController } from '../controllers/StatsController.js';
 
 const staticRouter = Express.Router();
 
+staticRouter.get('/', (req: Express.Request, res: Express.Response) => {
+    const targetFilePath = path.join(publicPath, "/index.html");
+    res.sendFile(targetFilePath);
+});
+
 staticRouter.get('/register', (req: Express.Request, res: Express.Response) => {
     const targetFilePath = path.join(publicPath, "/register.html");
     res.sendFile(targetFilePath);

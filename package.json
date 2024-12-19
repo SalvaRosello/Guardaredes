@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && node ./build/index.js"
+    "start": "npm run build && node ./build/backend/index.js",
+    "build:frontend": "tsc -p ./src/frontend/tsconfig.json",
+    "build:backend": "tsc -p ./tsconfig.json",
+    "build": "npm run build:frontend && npm run build:backend"
   },
   "keywords": [],
   "author": "",
