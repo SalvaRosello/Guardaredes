@@ -1,21 +1,32 @@
 {
   "name": "guardaredes",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && node ./build/index.js"
+    "start": "npm run build && node ./build/backend/index.js",
+    "build:frontend": "tsc -p ./src/frontend/tsconfig.json",
+    "build:backend": "tsc -p ./tsconfig.json",
+    "build": "npm run build:frontend && npm run build:backend"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^4.21.2"
+    "@supabase/supabase-js": "^2.47.5",
+    "argon2": "^0.41.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
     "@types/node": "^22.10.1",
+    "@types/pg": "^8.11.10",
     "typescript": "^5.7.2"
   }
 }

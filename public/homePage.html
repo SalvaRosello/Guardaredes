@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./main.js" type="module"></script>
+  <link rel="stylesheet" href="./styles/homePage.css">
+  <title>Guardaredes</title>
+</head>
+<body>
+  <header>
+    <h1>Estadísticas de Porteros</h1>
+    <div id="game-info">
+      <label for="player">Portero:</label>
+      <input type="text" id="player" placeholder="Nombre del portero">
+      <button id="start-game">Iniciar Partido</button>
+    </div>
+  </header>
+  <main>
+    <section id="goal-section">
+      <h2>Portería</h2>
+      <div class="porteria-container">
+        <div class="cuadrado" id="zona1"></div>
+        <div class="cuadrado" id="zona2"></div>
+        <div class="cuadrado" id="zona3"></div>
+        <div class="cuadrado" id="zona4"></div>
+        <div class="cuadrado" id="zona5"></div>
+        <div class="cuadrado" id="zona6"></div>
+        <div class="cuadrado" id="zona7"></div>
+        <div class="cuadrado" id="zona8"></div>
+        <div class="cuadrado" id="zona9"></div>
+    </div>
+      <div id="actions">
+        <button id="save">Parada</button>
+        <button id="goal">Gol</button>
+      </div>
+    </section>
+    <section id="stats-section">
+        <div class="stats-container">
+            <h2>Estadísticas</h2>
+            <div id="saves"></div>
+            <div id="goals"></div>
+            <div id="savePercentage"></div>
+        </div>
+    </section>
+  </main>
+</body>
+</html>
