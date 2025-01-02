@@ -1,6 +1,6 @@
-class AuthService {
-    static async login(username: any, password: any): Promise<any> {
-        const response = await fetch("http://localhost:3000/api/v1/users/logIn", {
+class AuthRegister {
+    static async register(username: any, password: any): Promise<any> {
+        const response = await fetch("http://localhost:3000/api/v1/users/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -21,10 +21,10 @@ class AuthService {
  }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
     
-    if (loginForm) {
-        loginForm.addEventListener('submit', async (event) => {
+    if (registerForm) {
+        registerForm.addEventListener('submit', async (event) => {
             event.preventDefault();
             
             const form = event.target;
@@ -36,19 +36,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(form);
             const credentials = {
                 username: formData.get('username'),
+                email: formData.get('email'),
                 password: formData.get('password')
             };
 
-            const result = await AuthService.login(credentials.username, credentials.password);
+            const result = await AuthRegister.register(credentials.username, credentials.password);
             
             if (result.success) {
                 const userID = result.data.id;
                 window.location.href = `/homePage/${userID}`;
             } else {
-                alert(result.message || "Login fallido");
+                alert(result.message || "Registro fallido");
             }
         });
     } else {
-        console.error('El formulario de login no se encontró');
+        console.error('El formulario del registro no se encontró');
     }
 });
